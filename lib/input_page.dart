@@ -10,10 +10,16 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('BMI CALCULATOR'),
+          title: const Text('BMI CALCULATOR'),
         ),
-        body: Center(
-          child: Text('Body Text'),
+        body: Container(
+          margin: const EdgeInsets.all(15),
+          decoration: BoxDecoration(
+            color: const Color(0xFF1D1E33),
+            borderRadius: BorderRadius.circular(10)
+          ),
+          height: 200,
+          width: 170,
         )
     );
   }

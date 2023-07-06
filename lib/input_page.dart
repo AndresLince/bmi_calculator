@@ -12,25 +12,16 @@ class _InputPageState extends State<InputPage> {
         appBar: AppBar(
           title: const Text('BMI CALCULATOR'),
         ),
-        body: const Column(
+        body: Column(
           children: [
             Expanded(
               child: Row(
                 children: [
                   Expanded(
-                    child: ReusableCard(),
+                    child: ReusableCard(colour: Color(0xFF1D1E33)),
                   ),
                   Expanded(
-                    child: ReusableCard(),
-                  ),
-                ],
-              ),
-            ),
-            Expanded(
-              child: Row(
-                children: [
-                  Expanded(
-                    child: ReusableCard(),
+                    child: ReusableCard(colour: Color(0xFF1D1E33)),
                   ),
                 ],
               ),
@@ -39,10 +30,19 @@ class _InputPageState extends State<InputPage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: ReusableCard(),
+                    child: ReusableCard(colour: Color(0xFF1D1E33)),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: ReusableCard(colour: Color(0xFF1D1E33)),
                   ),
                   Expanded(
-                    child: ReusableCard(),
+                    child: ReusableCard(colour: Color(0xFF1D1E33)),
                   ),
                 ],
               ),
@@ -54,8 +54,9 @@ class _InputPageState extends State<InputPage> {
 }
 
 class ReusableCard extends StatelessWidget {
-  const ReusableCard({
-    super.key,
+  Color colour;
+  ReusableCard({
+    required this.colour
   });
 
   @override

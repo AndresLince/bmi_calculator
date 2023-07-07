@@ -29,7 +29,8 @@ class _InputPageState extends State<InputPage> {
                     cardChild: GenderWidget(text: 'MALE', icon: FontAwesomeIcons.mars,),),
                   ),
                   Expanded(
-                    child: ReusableCard(colour: activeCardColor),
+                    child: ReusableCard(colour: activeCardColor,
+                    cardChild: GenderWidget(text: 'FEMALE', icon: FontAwesomeIcons.venus,),),
                   ),
                 ],
               ),

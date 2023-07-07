@@ -31,7 +31,11 @@ class _InputPageState extends State<InputPage> {
                         Icon(
                           FontAwesomeIcons.mars,
                           size: 80,
-                        )
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Text('MALE',style: TextStyle(fontSize: 18, color: Color(0xFF8D8E98)),)
                       ],
                     ),),
                   ),

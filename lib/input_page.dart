@@ -26,19 +26,7 @@ class _InputPageState extends State<InputPage> {
                 children: [
                   Expanded(
                     child: ReusableCard(colour: activeCardColor,
-                    cardChild: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          FontAwesomeIcons.mars,
-                          size: 80,
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Text('MALE',style: TextStyle(fontSize: 18, color: Color(0xFF8D8E98)),)
-                      ],
-                    ),),
+                    cardChild: GenderWidget(text: 'MALE', icon: FontAwesomeIcons.mars,),),
                   ),
                   Expanded(
                     child: ReusableCard(colour: activeCardColor),
@@ -75,6 +63,31 @@ class _InputPageState extends State<InputPage> {
             )
           ],
         )
+    );
+  }
+}
+
+class GenderWidget extends StatelessWidget {
+  final String text;
+  final icon;
+  const GenderWidget({
+    required this.text, this.icon
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          icon,
+          size: 80,
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        Text(text,style: TextStyle(fontSize: 18, color: Color(0xFF8D8E98)),)
+      ],
     );
   }
 }

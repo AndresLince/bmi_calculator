@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 const double bottomContainerHeight = 80;
+const primaryColor = 0xFF1D1E33;
+const footerColor = 0xFFEB1555;
 
 class InputPage extends StatefulWidget {
   @override
@@ -20,19 +22,10 @@ class _InputPageState extends State<InputPage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: ReusableCard(colour: Color(0xFF1D1E33)),
+                    child: ReusableCard(colour: Color(primaryColor)),
                   ),
                   Expanded(
-                    child: ReusableCard(colour: Color(0xFF1D1E33)),
-                  ),
-                ],
-              ),
-            ),
-            Expanded(
-              child: Row(
-                children: [
-                  Expanded(
-                    child: ReusableCard(colour: Color(0xFF1D1E33)),
+                    child: ReusableCard(colour: Color(primaryColor)),
                   ),
                 ],
               ),
@@ -41,16 +34,25 @@ class _InputPageState extends State<InputPage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: ReusableCard(colour: Color(0xFF1D1E33)),
+                    child: ReusableCard(colour: Color(primaryColor)),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: ReusableCard(colour: Color(primaryColor)),
                   ),
                   Expanded(
-                    child: ReusableCard(colour: Color(0xFF1D1E33)),
+                    child: ReusableCard(colour: Color(primaryColor)),
                   ),
                 ],
               ),
             ),
             Container(
-              color: Color(0xFFEB1555),
+              color: Color(footerColor),
               margin: EdgeInsets.only(top: 10.0),
               width: double.infinity,
               height: bottomContainerHeight,

@@ -79,8 +79,8 @@ class _InputPageState extends State<InputPage> {
 
 class GenderWidget extends StatelessWidget {
   final String text;
-  final icon;
-  const GenderWidget({required this.text, this.icon});
+  final IconData icon;
+  const GenderWidget({required this.text,required this.icon});
 
   @override
   Widget build(BuildContext context) {

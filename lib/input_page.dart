@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'reusable_card.dart';
 
 const double bottomContainerHeight = 80;
 const primaryColor = 0xFF1D1E33;
@@ -99,22 +100,6 @@ class GenderWidget extends StatelessWidget {
           style: TextStyle(fontSize: 18, color: Color(0xFF8D8E98)),
         )
       ],
-    );
-  }
-}
-
-class ReusableCard extends StatelessWidget {
-  final Color colour;
-  final cardChild;
-  ReusableCard({required this.colour, this.cardChild});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(15),
-      decoration:
-          BoxDecoration(color: colour, borderRadius: BorderRadius.circular(10)),
-      child: cardChild,
     );
   }
 }

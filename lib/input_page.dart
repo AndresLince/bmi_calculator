@@ -25,12 +25,22 @@ class _InputPageState extends State<InputPage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: ReusableCard(colour: activeCardColor,
-                    cardChild: GenderWidget(text: 'MALE', icon: FontAwesomeIcons.mars,),),
+                    child: ReusableCard(
+                      colour: activeCardColor,
+                      cardChild: GenderWidget(
+                        text: 'MALE',
+                        icon: FontAwesomeIcons.mars,
+                      ),
+                    ),
                   ),
                   Expanded(
-                    child: ReusableCard(colour: activeCardColor,
-                    cardChild: GenderWidget(text: 'FEMALE', icon: FontAwesomeIcons.venus,),),
+                    child: ReusableCard(
+                      colour: activeCardColor,
+                      cardChild: GenderWidget(
+                        text: 'FEMALE',
+                        icon: FontAwesomeIcons.venus,
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -63,17 +73,14 @@ class _InputPageState extends State<InputPage> {
               height: bottomContainerHeight,
             )
           ],
-        )
-    );
+        ));
   }
 }
 
 class GenderWidget extends StatelessWidget {
   final String text;
   final icon;
-  const GenderWidget({
-    required this.text, this.icon
-  });
+  const GenderWidget({required this.text, this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +94,10 @@ class GenderWidget extends StatelessWidget {
         SizedBox(
           height: 15,
         ),
-        Text(text,style: TextStyle(fontSize: 18, color: Color(0xFF8D8E98)),)
+        Text(
+          text,
+          style: TextStyle(fontSize: 18, color: Color(0xFF8D8E98)),
+        )
       ],
     );
   }
@@ -96,18 +106,14 @@ class GenderWidget extends StatelessWidget {
 class ReusableCard extends StatelessWidget {
   final Color colour;
   final cardChild;
-  ReusableCard({
-    required this.colour, this.cardChild
-  });
+  ReusableCard({required this.colour, this.cardChild});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(15),
-      decoration: BoxDecoration(
-        color: colour,
-        borderRadius: BorderRadius.circular(10)
-      ),
+      decoration:
+          BoxDecoration(color: colour, borderRadius: BorderRadius.circular(10)),
       child: cardChild,
     );
   }

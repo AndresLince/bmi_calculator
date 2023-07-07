@@ -4,6 +4,7 @@ const double bottomContainerHeight = 80;
 const primaryColor = 0xFF1D1E33;
 const activeCardColor = Color(primaryColor);
 const footerColor = 0xFFEB1555;
+const bottomContainerColor = Color(footerColor);
 
 class InputPage extends StatefulWidget {
   @override
@@ -53,7 +54,7 @@ class _InputPageState extends State<InputPage> {
               ),
             ),
             Container(
-              color: Color(footerColor),
+              color: bottomContainerColor,
               margin: EdgeInsets.only(top: 10.0),
               width: double.infinity,
               height: bottomContainerHeight,

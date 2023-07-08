@@ -34,7 +34,6 @@ class _InputPageState extends State<InputPage> {
                   Expanded(
                     child: GestureDetector(
                       onTap: () {
-                        print('entra');
                         setState(() {
                           maleCardColor = activeCardColor;
                           femaleCardColor = inactiveCardColor;
@@ -50,11 +49,19 @@ class _InputPageState extends State<InputPage> {
                     ),
                   ),
                   Expanded(
-                    child: ReusableCard(
-                      colour: femaleCardColor,
-                      cardChild: GenderWidget(
-                        text: 'FEMALE',
-                        icon: FontAwesomeIcons.venus,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          maleCardColor = inactiveCardColor;
+                          femaleCardColor = activeCardColor;
+                        });
+                      },
+                      child: ReusableCard(
+                        colour: femaleCardColor,
+                        cardChild: GenderWidget(
+                          text: 'FEMALE',
+                          icon: FontAwesomeIcons.venus,
+                        ),
                       ),
                     ),
                   ),

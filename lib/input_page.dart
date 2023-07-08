@@ -6,6 +6,7 @@ import 'gender_widget.dart';
 const double bottomContainerHeight = 80;
 const primaryColor = 0xFF1D1E33;
 const activeCardColor = Color(primaryColor);
+const inactiveCardColor = Color(0xFF111328);
 const footerColor = 0xFFEB1555;
 const bottomContainerColor = Color(footerColor);
 
@@ -15,6 +16,10 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+
+  Color maleCardColor = inactiveCardColor;
+  Color femaleCardColor = inactiveCardColor;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,17 +32,26 @@ class _InputPageState extends State<InputPage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: ReusableCard(
-                      colour: activeCardColor,
-                      cardChild: GenderWidget(
-                        text: 'MALE',
-                        icon: FontAwesomeIcons.mars,
+                    child: GestureDetector(
+                      onTap: () {
+                        print('entra');
+                        setState(() {
+                          maleCardColor = activeCardColor;
+                          femaleCardColor = inactiveCardColor;
+                        });
+                      },
+                      child: ReusableCard(
+                        colour: maleCardColor,
+                        cardChild: GenderWidget(
+                          text: 'MALE',
+                          icon: FontAwesomeIcons.mars,
+                        ),
                       ),
                     ),
                   ),
                   Expanded(
                     child: ReusableCard(
-                      colour: activeCardColor,
+                      colour: femaleCardColor,
                       cardChild: GenderWidget(
                         text: 'FEMALE',
                         icon: FontAwesomeIcons.venus,

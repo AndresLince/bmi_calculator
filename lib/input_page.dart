@@ -22,8 +22,8 @@ class _InputPageState extends State<InputPage> {
 
   void updateColor(int gender) {
     if (gender == 1) {
-      femaleCardColor = inactiveCardColor;
       if (maleCardColor == inactiveCardColor) {
+        femaleCardColor = inactiveCardColor;
         maleCardColor = activeCardColor;
       } else {
         maleCardColor = inactiveCardColor;
@@ -31,9 +31,9 @@ class _InputPageState extends State<InputPage> {
     }
 
     if (gender == 2) {
-      maleCardColor = inactiveCardColor;
       if (femaleCardColor == inactiveCardColor) {
         femaleCardColor = activeCardColor;
+        maleCardColor = inactiveCardColor;
       } else {
         femaleCardColor = inactiveCardColor;
       }

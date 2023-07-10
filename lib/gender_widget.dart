@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+const labelTextStyle = TextStyle(fontSize: 18, color: Color(0xFF8D8E98));
+
 class GenderWidget extends StatelessWidget {
   final String text;
   final IconData icon;
-  const GenderWidget({required this.text,required this.icon});
+  const GenderWidget({required this.text, required this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class GenderWidget extends StatelessWidget {
         ),
         Text(
           text,
-          style: TextStyle(fontSize: 18, color: Color(0xFF8D8E98)),
+          style: labelTextStyle,
         )
       ],
     );

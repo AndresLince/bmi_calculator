@@ -20,7 +20,7 @@ class GenderWidget extends StatelessWidget {
         ),
         Text(
           text,
-          style: labelTextStyle,
+          style: klabelTextStyle,
         )
       ],
     );

@@ -33,8 +33,8 @@ class _InputPageState extends State<InputPage> {
                         });
                       },
                       colour: selectedGender == Gender.male
-                          ? activeCardColor
-                          : inactiveCardColor,
+                          ? kactiveCardColor
+                          : kinactiveCardColor,
                       cardChild: GenderWidget(
                         text: 'MALE',
                         icon: FontAwesomeIcons.mars,
@@ -49,8 +49,8 @@ class _InputPageState extends State<InputPage> {
                         });
                       },
                       colour: selectedGender == Gender.female
-                          ? activeCardColor
-                          : inactiveCardColor,
+                          ? kactiveCardColor
+                          : kinactiveCardColor,
                       cardChild: GenderWidget(
                         text: 'FEMALE',
                         icon: FontAwesomeIcons.venus,
@@ -64,7 +64,7 @@ class _InputPageState extends State<InputPage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: ReusableCard(colour: activeCardColor,
+                    child: ReusableCard(colour: kactiveCardColor,
                     cardChild: Column(
                       children: [
                         Text('HEIGHT')
@@ -78,19 +78,19 @@ class _InputPageState extends State<InputPage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: ReusableCard(colour: activeCardColor),
+                    child: ReusableCard(colour: kactiveCardColor),
                   ),
                   Expanded(
-                    child: ReusableCard(colour: activeCardColor),
+                    child: ReusableCard(colour: kactiveCardColor),
                   ),
                 ],
               ),
             ),
             Container(
-              color: bottomContainerColor,
+              color: kbottomContainerColor,
               margin: EdgeInsets.only(top: 10.0),
               width: double.infinity,
-              height: bottomContainerHeight,
+              height: kbottomContainerHeight,
             )
           ],
         ));

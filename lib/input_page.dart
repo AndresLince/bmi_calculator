@@ -14,6 +14,7 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectedGender = Gender.none;
   int height = 180;
+  int weight = 60;
 
   @override
   Widget build(BuildContext context) {
@@ -125,7 +126,8 @@ class _InputPageState extends State<InputPage> {
                         cardChild: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('WEIGHT', style: klabelTextStyle),
+                            const Text('WEIGHT', style: klabelTextStyle),
+                            Text(weight.toString(), style: knumberTextStyle,)
                           ],
                         )),
                   ),

@@ -5,3 +5,4 @@ const double kbottomContainerHeight = 80;
 const kactiveCardColor = Color(0xFF1D1E33);
 const kinactiveCardColor = Color(0xFF111328);
 const kbottomContainerColor = Color(0xFFEB1555);
+const knumberTextStyle = TextStyle(fontSize: 50, fontWeight: FontWeight.w900);

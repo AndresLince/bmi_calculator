@@ -74,6 +74,7 @@ class _InputPageState extends State<InputPage> {
                             style: klabelTextStyle,
                           ),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
                                 '180',

@@ -142,6 +142,9 @@ class _InputPageState extends State<InputPage> {
                                     color: Colors.white,
                                   ),
                                 ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
                                 FloatingActionButton(
                                   onPressed: () {},
                                   backgroundColor: Color(0xFF4C4F5E),

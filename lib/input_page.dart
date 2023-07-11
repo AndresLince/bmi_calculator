@@ -120,7 +120,14 @@ class _InputPageState extends State<InputPage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: ReusableCard(colour: kactiveCardColor),
+                    child: ReusableCard(
+                        colour: kactiveCardColor,
+                        cardChild: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('WEIGHT', style: klabelTextStyle),
+                          ],
+                        )),
                   ),
                   Expanded(
                     child: ReusableCard(colour: kactiveCardColor),

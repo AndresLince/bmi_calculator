@@ -127,7 +127,18 @@ class _InputPageState extends State<InputPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             const Text('WEIGHT', style: klabelTextStyle),
-                            Text(weight.toString(), style: knumberTextStyle,)
+                            Text(
+                              weight.toString(),
+                              style: knumberTextStyle,
+                            ),
+                            FloatingActionButton(
+                              onPressed: () {},
+                              backgroundColor: Color(0xFF4C4F5E),
+                              child: const Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                            )
                           ],
                         )),
                   ),

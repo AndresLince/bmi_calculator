@@ -87,7 +87,12 @@ class _InputPageState extends State<InputPage> {
                                 style: klabelTextStyle,
                               )
                             ],
-                          )
+                          ),
+                          Slider(
+                              value: 180,
+                              min: 120.0,
+                              max: 220.0,
+                              onChanged: (double newValue) {})
                         ],
                       ),
                     ),

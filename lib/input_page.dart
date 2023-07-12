@@ -134,14 +134,7 @@ class _InputPageState extends State<InputPage> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                FloatingActionButton(
-                                  onPressed: () {},
-                                  backgroundColor: Color(0xFF4C4F5E),
-                                  child: const Icon(
-                                    Icons.remove,
-                                    color: Colors.white,
-                                  ),
-                                ),
+                                RoundIconButton(),
                                 const SizedBox(
                                   width: 10,
                                 ),
@@ -171,5 +164,16 @@ class _InputPageState extends State<InputPage> {
             )
           ],
         ));
+  }
+}
+
+class RoundIconButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      onPressed: () {},
+      shape: CircleBorder(),
+      fillColor: Color(0xFF4C4F5E),
+    );
   }
 }

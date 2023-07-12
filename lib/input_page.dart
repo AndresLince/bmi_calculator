@@ -132,14 +132,28 @@ class _InputPageState extends State<InputPage> {
                               style: knumberTextStyle,
                             ),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                RoundIconButton(iconData: FontAwesomeIcons.minus),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                RoundIconButton(iconData: FontAwesomeIcons.plus),                              ]
-                            )
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  RoundIconButton(
+                                    iconData: FontAwesomeIcons.minus,
+                                    onPressedFunction: () {
+                                      setState(() {
+                                        weight--;
+                                      });
+                                    },
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  RoundIconButton(
+                                    iconData: FontAwesomeIcons.plus,
+                                    onPressedFunction: () {
+                                      setState(() {
+                                        weight++;
+                                      });
+                                    },
+                                  ),
+                                ])
                           ],
                         )),
                   ),
@@ -161,19 +175,16 @@ class _InputPageState extends State<InputPage> {
 }
 
 class RoundIconButton extends StatelessWidget {
-
-  RoundIconButton({ required this.iconData });
+  RoundIconButton({required this.iconData, this.onPressedFunction});
   final IconData iconData;
+  final void Function()? onPressedFunction;
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
-      onPressed: () {},
+      onPressed: onPressedFunction,
       shape: CircleBorder(),
       fillColor: Color(0xFF4C4F5E),
-      constraints: BoxConstraints.tightFor(
-        width: 45,
-        height: 45
-      ),
+      constraints: BoxConstraints.tightFor(width: 45, height: 45),
       elevation: 6,
       child: Icon(iconData),
     );

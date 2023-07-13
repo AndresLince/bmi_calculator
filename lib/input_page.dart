@@ -210,6 +210,7 @@ class _InputPageState extends State<InputPage> {
               child: Container(
                 color: kbottomContainerColor,
                 margin: EdgeInsets.only(top: 10.0),
+                padding: EdgeInsets.only(bottom: 20),
                 width: double.infinity,
                 height: kbottomContainerHeight,
                 child: Center(child: Text('CALCULATE', style: klargeButtonTextStyle,)),

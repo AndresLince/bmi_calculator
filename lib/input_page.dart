@@ -159,14 +159,22 @@ class _InputPageState extends State<InputPage> {
                         )),
                   ),
                   Expanded(
-                    child: ReusableCard(colour: kactiveCardColor,
-                    cardChild: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('AGE', style: klabelTextStyle,),
-                        Text(age.toString(), style: knumberTextStyle,),
-                      ],
-                    ),),
+                    child: ReusableCard(
+                      colour: kactiveCardColor,
+                      cardChild: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'AGE',
+                            style: klabelTextStyle,
+                          ),
+                          Text(
+                            age.toString(),
+                            style: knumberTextStyle,
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),

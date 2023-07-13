@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/constants.dart';
+import 'package:bmi_calculator/reusable_card.dart';
 import 'package:flutter/material.dart';
 
 class ResultsPage extends StatelessWidget {
@@ -17,6 +18,12 @@ class ResultsPage extends StatelessWidget {
               style: ktitleTextStyle,
             ),
           ),
+          Expanded(
+              flex: 5,
+              child: ReusableCard(
+                colour: kactiveCardColor,
+              )
+          )
         ],
       ),
     );

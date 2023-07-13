@@ -11,7 +11,12 @@ class ResultsPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Expanded(child: Text('Your result:', style: ktitleTextStyle,),)
+          Expanded(
+            child: Text(
+              'Your result:',
+              style: ktitleTextStyle,
+            ),
+          ),
         ],
       ),
     );

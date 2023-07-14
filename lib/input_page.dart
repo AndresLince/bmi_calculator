@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'reusable_card.dart';
 import 'gender_widget.dart';
 import 'constants.dart';
+import 'bottom_buttom.dart';
 
 enum Gender { male, female, none }
 
@@ -203,18 +204,11 @@ class _InputPageState extends State<InputPage> {
                 ],
               ),
             ),
-            GestureDetector(
+            ButtomButton(
+              text: 'CALCULATE',
               onTap: () {
                 Navigator.pushNamed(context, '/results');
-              },
-              child: Container(
-                color: kbottomContainerColor,
-                margin: EdgeInsets.only(top: 10.0),
-                padding: EdgeInsets.only(bottom: 20),
-                width: double.infinity,
-                height: kbottomContainerHeight,
-                child: Center(child: Text('CALCULATE', style: klargeButtonTextStyle,)),
-              ),
+              }
             )
           ],
         ));

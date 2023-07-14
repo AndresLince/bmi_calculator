@@ -27,7 +27,8 @@ class ResultsPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text('Normal', style: kresultTextStyle,)
+                    Text('Normal', style: kresultTextStyle,),
+                    Text('18,3', style: kbmiTextStyle,)
                   ],
                 ),
               )

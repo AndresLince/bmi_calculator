@@ -3,7 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'reusable_card.dart';
 import 'gender_widget.dart';
 import 'constants.dart';
-import 'bottom_buttom.dart';
+import 'components/bottom_buttom.dart';
+import 'round_icon_button.dart';
 
 enum Gender { male, female, none }
 
@@ -215,19 +216,3 @@ class _InputPageState extends State<InputPage> {
   }
 }
 
-class RoundIconButton extends StatelessWidget {
-  RoundIconButton({required this.iconData, this.onPressed});
-  final IconData iconData;
-  final void Function()? onPressed;
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      onPressed: onPressed,
-      shape: CircleBorder(),
-      fillColor: Color(0xFF4C4F5E),
-      constraints: BoxConstraints.tightFor(width: 45, height: 45),
-      elevation: 6,
-      child: Icon(iconData),
-    );
-  }
-}

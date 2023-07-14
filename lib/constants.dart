@@ -21,5 +21,8 @@ const kresultTextStyle = TextStyle(
 );
 const kbmiTextStyle = TextStyle(
   fontSize: 100,
-  fontWeight: FontWeight.bold
+  fontWeight: FontWeight.bold,
+);
+const kbodyTextStyle = TextStyle(
+  fontSize: 22,
 );

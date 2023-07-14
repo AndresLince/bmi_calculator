@@ -10,6 +10,7 @@ class ResultsPage extends StatelessWidget {
         title: Text('BMI CALCULATOR'),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Expanded(
@@ -22,6 +23,13 @@ class ResultsPage extends StatelessWidget {
               flex: 5,
               child: ReusableCard(
                 colour: kactiveCardColor,
+                cardChild: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text('Normal', style: kresultTextStyle,)
+                  ],
+                ),
               )
           )
         ],

@@ -4,6 +4,14 @@ import 'package:flutter/material.dart';
 import '../components/bottom_buttom.dart';
 
 class ResultsPage extends StatelessWidget {
+  ResultsPage(
+      {required this.bmiResult,
+      required this.resultText,
+      required this.interpretation});
+  final String bmiResult;
+  final String resultText;
+  final String interpretation;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,22 +36,27 @@ class ResultsPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text('Normal', style: kresultTextStyle,),
-                    Text('18,3', style: kbmiTextStyle,),
-                    Text('Your BMI is quite low, you should eat more!',
+                    Text(
+                      resultText,
+                      style: kresultTextStyle,
+                    ),
+                    Text(
+                      bmiResult,
+                      style: kbmiTextStyle,
+                    ),
+                    Text(
+                      interpretation,
                       textAlign: TextAlign.center,
                       style: kbodyTextStyle,
                     )
                   ],
                 ),
-              )
-          ),
+              )),
           ButtomButton(
               text: 'RE - CALCULATE',
               onTap: () {
                 Navigator.pushNamed(context, '/');
-              }
-          )
+              })
         ],
       ),
     );
